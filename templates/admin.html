@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block navbar %}
+	<li><a href="{{ url_for('addhospital') }}">Add Hospital</a></li>
+	<li><a href="{{ url_for('complaint') }}">Complaint Section</a></li>	
+	<li><a href="{{ url_for('admin') }}">Logout</a></li>
+{% endblock navbar %}
+
+{% block content %}
+
+<div class="header__main" >
+    <div class="header__wrapper">
+        <div class="column__left">
+    		<h1>Covid Bed Finder</h1>
+    		<p>Admin page</p>
+        </div>
+    </div>
+</div>
+<div>
+	<a href= {{ url_for('hospital') }} ><img src="{{ url_for('static', filename='img/hospital.png') }}" class="header__img"></a>
+</div>
+<div>
+	<a href= {{ url_for('complaint') }}><img src="{{ url_for('static', filename='img/complaint.jpg') }}" class="header__img"></a>
+</div>
+
+<!--
+<div class="header__main" id="home" >
+	<div class="header__wrapper">
+		<div class="column__left">
+			<h1>Covid Bed Finder</h1>
+			<p>Admin Page</p>
+			<a href="{{ url_for('hospital') }}"><img src="{{ url_for('static', filename='img/hospital.png') }}" class="header__img"></a>
+		</div>
+		<div class="column__right" data-aos="fade-right" data-aos-duration="1000">
+			<a href="{{ url_for('complaint') }}"><img src="{{ url_for('static', filename='img/complaint.jpg') }}" class="header__img"></a>
+		</div>
+	</div>
+</div>
+-->
+{% endblock %}

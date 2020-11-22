@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>complaint page</h1>
+    {% for complaint in clist %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <h1>{{ complaint.name }}</h1>
+              <small class="text-muted">{{ complaint.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <p class="article-content">{{ complaint.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
