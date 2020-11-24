@@ -159,13 +159,14 @@
 
 .header__main{
 	background-color: #5959d4;
-	padding: 40px 60px;
+	padding: 40px 0px;
+	height: 75%;
 }
 
 .header__wrapper{
 	display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 700px;
+    grid-template-rows: 250px;
 }
 
 .header__wrapper .column__left{
@@ -201,15 +202,15 @@
 }
 
 .header__img {
-    height: 700px;
+    height: 120px;
 }
 
 .button {
     width: 170px;
     height: 50px;
-    background: #f4c4f3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #fc67fa, #f4c4f3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #cce6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #80bfff, #b3d9ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #80bfff, #b3d9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     border: none;
     cursor: pointer;
@@ -219,8 +220,8 @@ background: linear-gradient(to bottom, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, 
 
 .button:hover {
     background: #FF416C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to right, #80bfff, #b3d9ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #80bfff, #b3d9ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: white;
     border: 1px solid pink;
@@ -572,7 +573,7 @@ td{
 }
 
 td a{
-	color: black;
+	color: white;
 }
 
 tr:nth-child(even) {background: #CCC}
@@ -588,7 +589,7 @@ tr:hover td a{
 	color: white;
 }
 
-.label__head{
+.label__head h1{
 	font-size: 40px;
 	color: white;
 	font-weight: bold;
@@ -691,5 +692,14 @@ tr:hover td a{
 
 .container .account-heading {
   font-size: 2.5rem;
+}
+
+.profile{
+    background-color: #ffffff;
+    color: #cbd5db;
+    font-size: 40px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+    
 }
 

@@ -1,15 +1,33 @@
-{% extends 'base.html' %}
+
 {% block content %}
-    <h1>complaint page</h1>
-    {% for complaint in clist %}
-        <article class="media content-section">
-          <div class="media-body">
-            <div class="article-metadata">
-              <h1>{{ complaint.name }}</h1>
-              <small class="text-muted">{{ complaint.date_posted.strftime('%Y-%m-%d') }}</small>
-            </div>
-            <p class="article-content">{{ complaint.content }}</p>
-          </div>
-        </article>
-    {% endfor %}
+              <h1>complaint page</h1>
+          {% for complaint in clist.items %}
+          <article class="media content-section">
+             <div class="media-body">
+                <div class="article-metadata">
+                  <h2 class="article-title">{{ complaint.name }}</h2>
+                  <small class="text-muted">{{ complaint.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                <p class="article-content">{{ complaint.content }}</p>
+                <a href="{{ url_for('resolvecomplaint', complaint_id=complaint.id) }}"><button class="button"> Resolve </button></a>
+              </div>
+            </article>
+        {% endfor %}
+    
+        <div style="text-align: center;">
+            {% for page_num in clist.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page_num %}
+                    {% if clist.page == page_num  %}
+                        <a  class="btn btn-light mb-4" href="{{url_for('complaint', page=page_num) }}">{{ page_num }}</a>
+                    {% else %}
+                        <a  class="btn btn-outline-light mb-4" href="{{ url_for('complaint', page=page_num) }}">{{ page_num }}</a>
+                    {% endif %}
+                {% else %}
+                <span style="color: white;">...</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+        </div>
+      </div>
+    </main>
 {% endblock content %}

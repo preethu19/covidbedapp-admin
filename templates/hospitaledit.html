@@ -22,22 +22,26 @@
 						{% endfor %}
 					{% endif %}
 				{% endwith %}
-				<div class="wrap-input100 validate-input" data-validate="Name is required">
+				<div class="wrap-input100 validate-input">
                     <span class="label-input100">Hospital Name</span>
-                    {{ form.hospitalname(class="input100") }}
+                    <div>
+                        {{ hospital.name }}
+                    </div>
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input100 validate-input" data-validate="Name is required">
+				<div class="wrap-input100 validate-input">
 					<span class="label-input100">Area</span>
-					{{ form.area(class="input100") }}
+					<div>
+    					{{ hospital.area }}
+    				</div>
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 input100-select">
 					<span class="label-input100">District</span>
 					<div>
-						{{ form.district(class="input100") }}
+						{{ hospital.district }}
 					</div>
 					<span class="focus-input100"></span>
 				</div>
@@ -45,7 +49,7 @@
 				<div class="wrap-input100 input100-select">
 					<span class="label-input100">State</span>
 					<div>
-						{{ form.state(class="input100") }}
+						{{ hospital.state }}
 					</div>
 					<span class="focus-input100"></span>
 				</div>
@@ -58,7 +62,7 @@
                 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Available Beds</span>
-					<p class="input100">{{ hospital.available_beds }}</p>
+					<p class="input100">{{ hospital.available_beds }} <span class="authorized"> (Not authorized) </span></p>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -70,7 +74,7 @@
                 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Available Ward Beds</span>
-					<p class="input100">{{ hospital.available_ward_beds }}</p>
+					<p class="input100">{{ hospital.available_ward_beds }}<span class="authorized">(Not authorized) </span></p>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -82,7 +86,7 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Available Ward Beds with Oxygen</span>
-					<p class="input100">{{ hospital.available_ward_beds_with_oxygen }}</p>
+					<p class="input100">{{ hospital.available_ward_beds_with_oxygen }}<span class="authorized"> (Not authorized) </span></p>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -94,7 +98,7 @@
 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Available ICU Beds</span>
-					<p class="input100">{{ hospital.available_icu_beds }}</p>
+					<p class="input100">{{ hospital.available_icu_beds }}<span class="authorized"> (Not authorized) </span></p>
 					<span class="focus-input100"></span>
 				</div>
                 
@@ -106,7 +110,7 @@
                 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Available ICU Beds with Oxygen</span>
-					<p class="input100">{{ hospital.available_icu_beds_with_oxygen }}</p>
+					<p class="input100">{{ hospital.available_icu_beds_with_oxygen }}<span class="authorized"> (Not authorized) </span></p>
 					<span class="focus-input100"></span>
 				</div>
 

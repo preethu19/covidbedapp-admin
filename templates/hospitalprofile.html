@@ -1,0 +1,27 @@
+
+{% block content %}
+<div class="profile">
+    <div>
+        <h1>Hospital ID       : {{ hospital.id }}</h1>
+        <h1>Name     : {{ hospital.name }}</h1>
+        <h1>Area     : {{ hospital.area }}</h1>
+        <h1>District : {{ hospital.district }}</h1>
+        <h1>State    : {{ hospital.state }}</h1>
+    </div>
+        <P> Total Beds: {{ hospital.total_beds }}</p>
+        <P> Available Beds: {{ hospital.available_beds }}</p>
+        <P> Total ward Beds: {{ hospital.total_ward_beds }}</p>
+        <P> Available Ward Beds: {{ hospital.available_ward_beds }}</p>
+        <P> Total Ward Beds with Oxygen: {{ hospital.total_ward_beds_with_oxygen }}</p>
+        <P> Available Ward Beds With Oxygen: {{ hospital.available_ward_beds_with_oxygen }}</p>
+        <P> Total Icu Beds: {{ hospital.total_icu_beds }}</p>
+        <P> Available Icu Beds: {{ hospital.available_icu_beds }}</p>
+        <P> Total Icu Beds With Oxygen: {{ hospital.total_icu_beds_with_oxygen }}</p> 
+        <P> Available Icu Beds With Oxygen: {{ hospital.available_icu_beds_with_oxygen }}</p> 
+        <a href="#"><button class="button"> Patient List </button></a>
+        <a href="{{ url_for('edithospital', hospital_id=hospital.id) }}"><button class="button"> Edit </button></a>
+        <a href="{{ url_for('removehospital', hospital_id=hospital.id) }}"><button class="button"> remove hospital</button></a>
+    <div>
+    </div>
+</div>
+{% endblock %}

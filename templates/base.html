@@ -20,12 +20,12 @@
 <!-- Navbar Section -->
 <div class="navbar__main">
 	<header class="header">
-	<a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo.jpg') }}" class="logo"></a>
+	<a href="{{ url_for('admin') }}"><img src="{{ url_for('static', filename='img/logo.jpg') }}" class="logo"></a>
 	  <input class="menu-btn" type="checkbox" id="menu-btn" />
 	  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 	  <ul class="menu">
-		<li><a href="{{ url_for('home') }}">Home</a></li>
-		<li><a href="{{ url_for('hospital') }}">Hospital</a></li>
+		<li><a href="{{ url_for('admin') }}">Admin</a></li>
+		<li><a href="{{ url_for('admin') }}">Logout</a></li>
           {% block navbar %}
           {% endblock %}
 	  </ul>
@@ -43,12 +43,10 @@
             </div>
           {% endfor %}
         {% endif %}
-      {% endwith %}
-      <div class="container">
-        {% block content %}{% endblock %}
-      </div>
-      
+      {% endwith %}     
     </div>
 </div>
+    
+{% block content %}{% endblock %}
 </body>
 </html>
